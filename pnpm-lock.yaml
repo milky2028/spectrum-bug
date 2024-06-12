@@ -26,6 +26,9 @@ importers:
       '@spectrum-web-components/dialog':
         specifier: ^0.43.0
         version: 0.43.0
+      '@spectrum-web-components/menu':
+        specifier: ^0.43.0
+        version: 0.43.0
       '@spectrum-web-components/overlay':
         specifier: ^0.43.0
         version: 0.43.0
@@ -337,6 +340,9 @@ packages:
 
   '@spectrum-web-components/iconset@0.43.0':
     resolution: {integrity: sha512-O/Kz72R7DAS5r+DlpQ6oh83x1gvbNSaraqso3JyvliI4Z1Fwg0fsgBmmc24+wVvSc5z6RUJ8RXyFXMukRUOZkA==}
+
+  '@spectrum-web-components/menu@0.43.0':
+    resolution: {integrity: sha512-UqS5c+7kNknHrfyVSl1ThIxpLoXmvYo3lCAu0MKgDO6R0ourNBVzgfKgHXj7SdhakgJSTtcmTnwXriIvY/p4uA==}
 
   '@spectrum-web-components/modal@0.43.0':
     resolution: {integrity: sha512-mNhPnn+zjvBEz6Fm4dpl4OHv+qq5yw5GZq6G8ka/oNVmk2ZVT6XoLPhezHYqnyycGqiiqXeWom5Mmfzdcp+muw==}
@@ -678,6 +684,19 @@ snapshots:
   '@spectrum-web-components/iconset@0.43.0':
     dependencies:
       '@spectrum-web-components/base': 0.43.0
+
+  '@spectrum-web-components/menu@0.43.0':
+    dependencies:
+      '@lit-labs/observers': 2.0.2
+      '@spectrum-web-components/action-button': 0.43.0
+      '@spectrum-web-components/base': 0.43.0
+      '@spectrum-web-components/divider': 0.43.0
+      '@spectrum-web-components/icon': 0.43.0
+      '@spectrum-web-components/icons-ui': 0.43.0
+      '@spectrum-web-components/overlay': 0.43.0
+      '@spectrum-web-components/popover': 0.43.0
+      '@spectrum-web-components/reactive-controllers': 0.43.0
+      '@spectrum-web-components/shared': 0.43.0
 
   '@spectrum-web-components/modal@0.43.0':
     dependencies:

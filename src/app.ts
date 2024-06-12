@@ -12,6 +12,10 @@ import "@spectrum-web-components/theme/sp-theme.js";
 import "@spectrum-web-components/theme/src/themes.js";
 import "@spectrum-web-components/tooltip/sp-tooltip.js";
 import "@spectrum-web-components/underlay/sp-underlay.js";
+import "@spectrum-web-components/menu/sp-menu.js";
+import "@spectrum-web-components/menu/sp-menu-group.js";
+import "@spectrum-web-components/menu/sp-menu-item.js";
+import "@spectrum-web-components/menu/sp-menu-divider.js";
 
 import { MobxLitElement } from "@adobe/lit-mobx";
 import { customElement } from "lit/decorators.js";
@@ -20,7 +24,27 @@ import { customElement } from "lit/decorators.js";
 export class App extends MobxLitElement {
   render() {
     return html`<sp-theme scale="medium" color="dark">
-      <sp-button> A button </sp-button>
+      <sp-popover open style="position: relative">
+        <sp-menu>
+          <sp-menu-item>One</sp-menu-item>
+          <sp-menu-item
+            >Two Has a Submenu
+            <sp-menu slot="submenu">
+              <sp-menu-item>One</sp-menu-item>
+              <sp-menu-item
+                >This one also has a submenu
+                <sp-menu slot="submenu">
+                  <sp-menu-item>One</sp-menu-item>
+                  <sp-menu-item>This one also has a submenu</sp-menu-item>
+                </sp-menu>
+              </sp-menu-item>
+            </sp-menu>
+          </sp-menu-item>
+          <sp-menu-item>Three</sp-menu-item>
+          <sp-menu-item>Four</sp-menu-item>
+          <sp-menu-item>Five</sp-menu-item>
+        </sp-menu>
+      </sp-popover>
     </sp-theme>`;
   }
 }
